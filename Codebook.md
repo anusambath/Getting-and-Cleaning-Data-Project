@@ -1,4 +1,4 @@
-## Getting and Cleaning Data Project
+### Getting and Cleaning Data Project
 
 Author: Anu Sambath
 
@@ -12,28 +12,28 @@ The sensor signals (accelerometer and gyroscope) were pre-processed by applying 
 
 ## Steps Taken to Clean the Data
 
-# 1. Download the Dataset File from Source
+### 1. Download the Dataset File from Source
    - Download the zip file to current working directory
    - Unzip the files. This unzips to a folder called "UCI HAR Dataset"
    
-# 2. Read Activity Lables
+### 2. Read Activity Lables
 activity_labels.txt has the mapping of activity code used in data files to the activity lable. Use factor function to replace the activity code with label in the process of tidying.
 
-# 3. Read Features Datasets
+### 3. Read Features Datasets
 features.txt list the 561 features measured. Extract only interested in mean and std measurements. Search for "mean|std" using grep function to determine the column numbers in test and training data to retain. Use this datasets to build the list of column names to apply to the datasets.
 
-# 4. Read Training Datasets 
+### 4. Read Training Datasets 
 Read X_train.txt, y_train.txt and subject_train.txt from "UCI HAR Dataset\train"
 Bind the three datasets by column
 
-# 5. Read Test Datasets
+### 5. Read Test Datasets
 Read X_test.txt, y_test.txt and subject_test.txt from "UCI HAR Dataset\test"
 Bind the three datasets by column
 
-# 6. Merge Training and Test Datasets
+### 6. Merge Training and Test Datasets
 Merge Traing and Test datasets using row binding and apply the column labels.
 
-# 7. Create a Dataset with Average of Each Variable
+### 7. Create a Dataset with Average of Each Variable
   - Gather the the merged dataset to obtain a skinny table. 
   - Group the merged data set by SubjectNum, Activity and Variable. 
   - Summerize to obtain the mean. 
